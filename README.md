@@ -24,10 +24,29 @@ http://35.229.116.17:8080/index.html
 ## Python Client
 ### Requirements
 
-python2 should be installed in client machine.
+The python client is implemented in python2. There is a requirements file to install the libraries with pip.
 
 `pip install -r src/python_client/requirements.txt`
 
 ### Usage
 
 `python src/python_client/compare_images.py img1.jpg img2.jpg`
+
+### Running the examples
+```
+python compare_images.py ../test/images/example1_complete.jpg ../test/images/example1_redcar.jpg
+Image to look in: ../test/images/example1_complete.jpg, subimage ../test/images/example1_redcar.jpg
+There is a match for the given images, calculated score is 0.7615725857904181 , positions are x:650.0 y: 277.0
+```
+
+```
+ python compare_images.py ../test/images/example1_complete.jpg ../test/images/example1_redcar_no_match.jpg 
+Image to look in: ../test/images/example1_complete.jpg, subimage ../test/images/example1_redcar_no_match.jpg
+There was not match for the given images. Calculated score was 0.20054876804351807
+```
+
+```
+ python compare_images.py ../test/images/example1_complete.jpg ../test/images/example1_redcar80.jpg 
+Image to look in: ../test/images/example1_complete.jpg, subimage ../test/images/example1_redcar80.jpg
+There is a match for the given images, calculated score is 0.7560648082289845 , positions are x:650.0 y: 277.0
+```
