@@ -10,7 +10,7 @@ import redis
 
 MAX_REDIS_RETRIES = 10
 
-r = redis.Redis(host="35.229.116.17", port=6379)
+r = redis.Redis(host="35.229.116.17", port=44409)
 
 def image_to_base64(img_path):
     with open(img_path, "rb") as image_file:

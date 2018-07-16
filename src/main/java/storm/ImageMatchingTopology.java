@@ -41,7 +41,7 @@ public class ImageMatchingTopology {
 		conf.put(Config.STORM_MESSAGING_NETTY_BUFFER_SIZE,        16384);
 		
 		conf.put("redisHost", "localhost");
-		conf.put("redisPort", 6379);
+		// conf.put("redisPort", 6379);
 		
 		LocalCluster cluster = new LocalCluster();
 		cluster.submitTopology(TOPOLOGY_NAME, conf, topologyStrategy.buildTopology());
